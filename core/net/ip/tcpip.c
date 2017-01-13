@@ -537,7 +537,7 @@ tcpip_ipv6_output(void)
   }
 
   if(uip_len > UIP_LINK_MTU) {
-    UIP_LOG("tcpip_ipv6_output: Packet to big");
+    UIP_LOG("tcpip_ipv6_output: Packet too big");
     uip_clear_buf();
     return;
   }
@@ -624,7 +624,7 @@ tcpip_ipv6_output(void)
         if(nexthop == NULL) {
 #if UIP_CONF_IPV6_RPL
           /* If we are running RPL, and if we are the root of the
-             network, we'll trigger a global repair berfore we remove
+             network, we'll trigger a global repair before we remove
              the route. */
           rpl_dag_t *dag;
           rpl_instance_t *instance;

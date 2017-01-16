@@ -43,6 +43,7 @@
 /*---------------------------------------------------------------------------*/
 #define I2C_DEF(XX)                                          \
   uint8_t i2c##XX##_init();                                  \
+  uint8_t i2c##XX##_release();                               \
   uint8_t i2c##XX##_bus_idle();                              \
   uint8_t i2c##XX##_set_frequency (uint32_t );               \
   uint8_t i2c##XX##_master_enable();                         \
@@ -70,5 +71,5 @@
 #endif /* __32MX470F512H__ */
 
 #endif /* __USE_I2C__ */
-  
+
 #endif /* INCLUDE_PIC32_I2C_H_ */
